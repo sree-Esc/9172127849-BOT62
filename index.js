@@ -4,8 +4,8 @@ const express = require("express");
 const fs = require("fs");
 const app = express();
 
-const PORT = process.env.PORT || 3039;
-const DATA_FILE = "/mnt/data/repliedNumbers_39.json"; // Persistent file
+const PORT = process.env.PORT || 3062;
+const DATA_FILE = "/mnt/data/repliedNumbers_62.json"; // Persistent file
 
 // ------------------
 // Track bot status
@@ -30,8 +30,8 @@ if (fs.existsSync(DATA_FILE)) {
 // ------------------
 const client = new Client({
   authStrategy: new LocalAuth({
-    clientId: "bot139",
-    dataPath: "/mnt/data/.wwebjs_auth/bot139",
+    clientId: "bot162",
+    dataPath: "/mnt/data/.wwebjs_auth/bot162",
   }),
   puppeteer: {
     headless: true,
@@ -116,3 +116,4 @@ app.get("/", (req, res) => {
 app.listen(PORT, "0.0.0.0", () => {
   console.log(`🌐 Server running on port ${PORT}`);
 });
+
